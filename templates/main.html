@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}
+Main
+{% endblock %}
+
+{% block content %}
+
+<body style="background-color: white;">
+<div class="container my-5">
+    <h1 class="text-center font-weight-bold display-4 my-5 text-uppercase" style="font-size: 4em; letter-spacing: 2px; color: #005C97; font-weight: 700;">БГ Историйки</h1>
+    <p class="lead text-center my-3" style="font-size: 1.5em; font-weight: bold; color: #005C97;">Тук може да качвате своите <span class="font-weight-bold" style="color: #EC7A00;">истории</span> с <span class="font-weight-bold" style="color: #EC7A00;">пълна свобода</span> независимо от темата. Ние сме платформа, която приема <span class="font-weight-bold" style="color: #EC7A00;">всички</span> истории, без значение дали те са хумористични, сериозни или романтични.</p>
+    <div class="d-flex justify-content-center my-5">
+    
+        <a href="{{ url_for('post') }}" class="btn btn-primary mr-3">Post a Story</a>
+        <a href="donate" class="btn btn-success mx-3">Donate</a>
+      </div>
+      
+      
+    
+    <div class="d-flex justify-content-center mt-5">
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Unrestricted Posting</h5>
+            <p class="card-text">Post any story you want without any restrictions or filters.</p>
+          </div>
+        </div>
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Open Community</h5>
+            <p class="card-text">Join a community of fellow storytellers and readers who are passionate about sharing their stories.</p>
+          </div>
+        </div>
+        <div class="card mx-3" style="width: 18rem;">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Support Independent Creators</h5>
+            <p class="card-text">Donate to support independent creators and help them keep creating amazing content.</p>
+          </div>
+        </div>
+      </div>
+      
+<div class="d-flex justify-content-center my-5">
+    <a href="{{url_for('view')}}" class="btn btn-info">View Stories</a>
+  </div>
+      
+      
+      
+    </div>
+  </div>
+  
+{% endblock %}```

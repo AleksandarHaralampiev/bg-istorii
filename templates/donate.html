@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %} Donate {% endblock %}
+{% block content %}
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 40px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    
+  }
+  
+  label, input[type="text"], input[type="submit"] {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  label {
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  input[type="text"] {
+    height: 36px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  input[type="submit"] {
+    height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+  }
+  </style>
+</head>
+<body>
+    <br>
+  <h1>Donate to Our Cause</h1>
+  
+  <a href="{{ url_for('post') }}" class="btn btn-primary mr-3">Post a Story</a>
+</body>
+
+{% endblock %}

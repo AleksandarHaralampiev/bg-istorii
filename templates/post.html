@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+    POST
+{% endblock %}
+{% block content %}
+<body style="color: black;">
+    <div class="container">
+        <br>
+        <form action="", method="POST", class="form-register", style="color:black">
+                {{form.hidden_tag()}}
+                <h1 class="h3 mb-3 font-weight-normal">Enter your message</h1>
+                <br>
+                {{ form.csrf_token }}
+                {{ form.title.label() }}
+                {{ form.title(class = "form-control") }}
+                {{ form.message.label() }}
+                <textarea class="form-control" name="message", rows="10">{{ form.message.data }}</textarea>
+                {{ form.author.label()}}
+                {{ form.author(class = "form-control", placeholder = 'Author') }}
+
+                {{form.submit(class = "btn btn-primary btn-lg mt-3")}}
+        </form>
+    </div>
+</body>
+
+
+{% endblock %}

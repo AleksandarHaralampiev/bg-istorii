@@ -1,0 +1,37 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <form class="form-inline d-flex justify-content-center">
+          <input type="text" class="form-control w-75" placeholder="Search for stories">
+          <button type="submit" class="btn btn-primary ml-3">Search</button>
+        </form>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+  <br><br>
+
+    <div class="row my-5" >
+      {% for message in messages %}
+      <div class="col-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{message.title}}</h5>
+            <p class="card-text">{{message.main[:50]}}</p>
+            <p class="card-text">{{message.date}}</p>
+            <p class="card-text">{{message.author}}</p>
+            <p class="card-text">{{message.views}}</p>
+            <a href="{{url_for('story', Msg_id = message.id)}}" class="btn btn-primary">Read</a>
+          </div>
+        </div>
+        <br>
+      </div>
+      
+      {% endfor %}
+  </div>
+  
+{% endblock %}  

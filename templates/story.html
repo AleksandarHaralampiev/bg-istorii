@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+      <div class="col-12">
+        <h1>{{ msg.title }}</h1>
+        <h6>By {{ msg.author }}, on {{ msg.date }}</h6>
+        <hr>
+        <p>{{ msg.main }}</p>
+      </div>
+    </div>
+    <div class="row my-3">
+      <div class="col-12">
+        <a href="{{ url_for('view') }}" class="btn btn-primary">Back to View</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}
